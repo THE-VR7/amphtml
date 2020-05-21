@@ -40,14 +40,17 @@ export class LightboxCaption {
       <div class="i-amphtml-lbg-caption">
         <div class="i-amphtml-lbg-caption-scroll">
           <div class="i-amphtml-lbg-caption-text"></div>
-        </div>
+          <div class="amp-lightbox-gallery-caption"></div>
+         </div>
         <div class="i-amphtml-lbg-caption-mask"></div>
       </div>`;
     return new LightboxCaption(
       el,
       dev().assertElement(el.querySelector('.i-amphtml-lbg-caption-scroll')),
       dev().assertElement(el.querySelector('.i-amphtml-lbg-caption-text')),
+      dev().assertElement(el.querySelector('amp-lightbox-gallery-caption')),
       dev().assertElement(el.querySelector('.i-amphtml-lbg-caption-mask')),
+      
       measureMutateElement
     );
   }
